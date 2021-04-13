@@ -21,32 +21,60 @@
 			}
 		},
 		{
-			"path": "pages/index/index",
+			"path": "pages/userInfo/userInfo",
 			"style": {
-				"navigationBarTitleText": "uni-"
+				"navigationBarTitleText": "个人中心",
+				"navigationBarShadow": {
+					"colorType": "grey"
+				}
+			}
+		},
+		{
+			"path": "pages/message/message",
+			"style": {
+				"app-plus": {
+					"titleNView": false // 去掉APP、H5的顶部导航
+				}
 			}
 		}
 
+		, {
+			"path": "pages/form/form",
+			"style": {
+				"navigationBarTitleText": "签到考勤",
+				// "enablePullDownRefresh": true,
+				"navigationBarShadow": {
+					"colorType": "grey"
+				}
+			}
+
+		}
 	],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
-		"navigationBarTitleText": "uni-app",
 		"navigationBarBackgroundColor": "white",
-		"backgroundColor": "#F8F8F8",
-		"enablePullDownRefresh": true 
-
+		"backgroundColor": "#F8F8F8"
 	},
 	"tabBar": {
 		"color": "#7A7E83",
-		"selectedColor": "#3cc51f",
+		"selectedColor": "#1296db",
 		"borderStyle": "black",
 		"backgroundColor": "#ffffff",
 		"list": [{
 			"pagePath": "pages/home/home",
-			"text": "组件"
+			"iconPath": "static/icons/home.png",
+			"selectedIconPath": "static/icons/home_selected.png",
+			"text": "百智"
 		}, {
-			"pagePath": "pages/index/index", //这是第二个页面路径，不能一样否则报错
-			"text": "接口"
+			"iconPath": "static/icons/message.png",
+			"selectedIconPath": "static/icons/message-selected.png",
+			"pagePath": "pages/message/message", //这是第二个页面路径，不能一样否则报错
+			"text": "消息"
+		}, {
+			"iconPath": "static/icons/user.png",
+			"selectedIconPath": "static/icons/user_selected.png",
+			"pagePath": "pages/userInfo/userInfo", //这是第二个页面路径，不能一样否则报错
+			"text": "个人"
 		}]
 	}
 }

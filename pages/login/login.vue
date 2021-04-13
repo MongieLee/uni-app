@@ -53,8 +53,13 @@
 				this.$refs.uForm.validate(valid => {
 					console.log(valid)
 					if (valid) {
-						bizRequest('/oauth/token', 'POST', this.form, {}, true).then(() => {
-							console.log('success')
+						bizRequest('/oauth/token', 'POST', this.form, {}, true).then((response) => {
+							console.log(response)
+							try {
+								uni.setStorageSync('access_token', response.data.access_token);
+							} catch (e) {
+								console.log(e)
+							}
 							this.$refs.uToast.show({
 								title: '登陆成功',
 								type: 'success',

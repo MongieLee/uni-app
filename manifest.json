@@ -72,6 +72,16 @@
         "title" : "百智CMS",
         "router" : {
             "mode" : "hash"
+        },
+        "devServer" : {
+            "https" : false
+        },
+        "sdkConfigs" : {
+            "maps" : {
+                "qqmap" : {
+                    "key" : "QWMBZ-7H36U-S6DVD-4GNEP-KQE3F-YMBMX"
+                }
+            }
         }
     }
 }
